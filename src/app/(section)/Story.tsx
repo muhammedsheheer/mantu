@@ -16,7 +16,10 @@ const Story: React.FC = () => {
               Follow us on Instagram for a taste of our culinary artistry,
               behind-the-scenes moments, and exclusive updates
             </p>
-            <Link href={"/table-booking"}>
+            <Link
+              href={"https://www.instagram.com/mantu.london"}
+              target="_blank"
+            >
               <Button className="rounded-none bg-[#F6CA70] px-8 py-6 font-cormorant text-xs font-[700] uppercase tracking-[2px] text-[#000] hover:bg-[#dfc69f] md:tracking-[4.6]">
                 @mantu.london{" "}
               </Button>

@@ -91,13 +91,19 @@ const Contact = ({}) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href={""} target="_blank">
+                  <Link
+                    href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
+                    target="_blank"
+                  >
                     <p className="text-[#391D00]">
                       2 Kendal Ave, London W3 0PA,
                       <br /> United Kingdom
                     </p>
                   </Link>
-                  <Link href={""} target="_blank">
+                  <Link
+                    href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
+                    target="_blank"
+                  >
                     <p className="flex items-center gap-2 text-sm text-[#391D00]">
                       <span>Get Direction</span>
                       <ArrowRight className="text-[#391D00]" />
@@ -122,19 +128,30 @@ const Contact = ({}) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href="tel:+442035001710" className="text-[#391D00]">
-                    +44 20 3500 1710{" "}
+                  <Link href="tel:02039744620" className="text-[#391D00]">
+                    +020 3974 4620
                   </Link>
                 </div>
               </div>
               <div className="flex items-center justify-start gap-4">
-                <Link href={""} target="_blank">
+                <Link
+                  href={"https://www.instagram.com/mantu.london"}
+                  target="_blank"
+                >
                   <Icons.instagram className="text-[#391D00]" />
                 </Link>
-                <Link href={""} target="_blank">
+                <Link
+                  href={
+                    "https://www.tripadvisor.com/ShowUserReviews-g1646063-d2012817-r750556155-Kabul_City_Restaurant-Edgware_Greater_London_England.html"
+                  }
+                  target="_blank"
+                >
                   <Icons.unknown className="text-[#391D00]" />
                 </Link>
-                <Link href={""} target="_blank">
+                <Link
+                  href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
+                  target="_blank"
+                >
                   <Icons.google className="text-[#391D00]" />
                 </Link>
                 {/* <Link href='https://www.facebook.com/Istanbulwoolton/'>
@@ -232,7 +249,7 @@ const Contact = ({}) => {
           </div>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3518235577612!2d-0.282350023528942!3d51.525106571817304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487611828d8d4ff7%3A0xd0a626f080e14845!2sNova%20Park%20Royal!5e0!3m2!1sen!2sin!4v1740603246277!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.443592091924!2d-0.27796922352327036!3d51.61508287183801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761765a0a0f7f7%3A0xf849ef300d9e43a7!2sMantu%20Restaurant%20%7C%20Afghan%20Cuisine!5e0!3m2!1sen!2sin!4v1742806064204!5m2!1sen!2sin"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
@@ -243,7 +260,7 @@ const Contact = ({}) => {
       <div className="flex w-full overflow-hidden">
         <Image
           className="h-full w-full object-cover lg:h-[500px]"
-          src="/images/about-us/image5.jpeg"
+          src="/images/about-us/image1.jpg"
           alt="bottom"
           width={966}
           height={96}

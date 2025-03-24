@@ -19,7 +19,7 @@ const Reserve: React.FC = () => {
                 your spot and let us take you on a journey of rich flavors and
                 warm hospitality. Book your table now!
               </p>
-              <Link href={"/menu"}>
+              <Link href={"/table-booking"}>
                 <Button className="rounded-none bg-[#F5CA71] px-8 py-7 font-cormorant text-sm font-[700] uppercase tracking-[2px] text-[#000] hover:bg-[#dfc69f] md:tracking-[4.6]">
                   Book Now{" "}
                 </Button>

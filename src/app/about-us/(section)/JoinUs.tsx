@@ -7,7 +7,7 @@ const JoinUs = ({}) => {
     <section
       className="relative flex h-screen w-full items-center justify-center"
       style={{
-        backgroundImage: `url('/images/about-us/image4.jpg')`,
+        backgroundImage: `url('/images/about-us/image3.png')`,
         backgroundSize: "cover",
       }}
     >
@@ -19,12 +19,14 @@ const JoinUs = ({}) => {
             Unforgettable Meal
           </h1>
           <p className="max-w-[450px] text-center font-[600] leading-[160%] text-[#ffff]">
-            Whether it`s an intimate dinner or a grand celebration, Nova invites
-            you to indulge in an exceptional culinary journey. From expertly
-            crafted flavors to hand-selected ingredients, every dish reflects
-            our passion for excellence. Immerse yourself in a dining experience
-            where innovation meets tradition, and every bite tells a story.
+            Whether it’s a cozy gathering or a grand celebration, Mantu invites
+            you to experience the richness of Afghan cuisine. From delicately
+            crafted dumplings to time-honored recipes, every dish is a tribute
+            to authenticity and tradition. Immerse yourself in a culinary
+            journey where heritage meets innovation, and every bite tells a
+            story of flavor and passion.
           </p>
+
           <Link href={"/table-booking"}>
             <Button
               variant="outline"

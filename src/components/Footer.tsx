@@ -24,12 +24,12 @@ const Footer = ({}) => {
           <div className="w-full border-b-[1px] border-b-[rgba(236,230,214,0.10)]" />
           <div className="flex flex-col gap-10 md:flex-row md:gap-32">
             <div className="flex flex-col gap-4 px-6 md:gap-6 md:px-3">
-              <Link href={""}>
+              <Link href={"/about-us"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   About
                 </span>
               </Link>
-              <Link href={""}>
+              <Link href={"/menu"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   our menu
                 </span>
@@ -39,7 +39,7 @@ const Footer = ({}) => {
                   Specials
                 </span>
               </Link>
-              <Link href={""}>
+              <Link href={"/contact"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   Contact
                 </span>
@@ -82,18 +82,21 @@ const Footer = ({}) => {
               Address{" "}
             </span>
             <div className="flex flex-col gap-1 md:items-center md:justify-center">
-              <Link href={""} target="_blank">
+              <Link
+                href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
+                target="_blank"
+              >
                 <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff] md:text-center">
                   228 Station Road <br />
                   Edgware HA8 7AU
                 </span>
               </Link>
-              <Link href={""}>
+              <Link href={"tel:02039744620"}>
                 <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff] md:text-center">
-                  +020 3784 9618{" "}
+                  +020 3974 4620
                 </span>
               </Link>
-              <Link href={""}>
+              <Link href={"mailto:Hello@manturestaurant.co.uk"}>
                 <span className="font-cormorant text-sm font-[700] uppercase text-[#fff] underline md:text-center md:tracking-[3.96px]">
                   Hello@manturestaurant.co.uk{" "}
                 </span>
@@ -101,13 +104,24 @@ const Footer = ({}) => {
             </div>
           </div>
           <div className="flex flex-row items-center gap-4 md:justify-center">
-            <Link href={""} target="_blank">
+            <Link
+              href={"https://www.instagram.com/mantu.london"}
+              target="_blank"
+            >
               <Icons.instagram className="text-[#fff]" />
             </Link>
-            <Link href={""} target="_blank">
-              <Icons.facebook className="text-[#fff]" />
+            <Link
+              href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
+              target="_blank"
+            >
+              <Icons.google className="text-[#fff]" />
             </Link>
-            <Link href={""} target="_blank">
+            <Link
+              href={
+                "https://www.tripadvisor.com/ShowUserReviews-g1646063-d2012817-r750556155-Kabul_City_Restaurant-Edgware_Greater_London_England.html"
+              }
+              target="_blank"
+            >
               <Icons.unknown className="text-[#fff]" />
             </Link>
           </div>

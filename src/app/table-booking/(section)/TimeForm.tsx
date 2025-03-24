@@ -200,13 +200,15 @@ const TimeForm: FC<TimeFormProps> = ({ mainform, setpage }) => {
                       <FormControl>
                         <Button
                           variant={"outline"}
-                          className={`h-12 w-full justify-start border-muted bg-transparent text-left font-normal text-[#391D00] hover:text-[#CFAC6A]`}
+                          className={`h-12 w-full justify-start border-muted bg-transparent text-left font-normal text-[#391D00] hover:bg-[#fff] hover:text-[#CFAC6A]`}
                         >
-                          <CalendarIcon className="mr-2 h-4 w-4 text-[#391D00]" />
+                          <CalendarIcon className="mr-2 h-4 w-4 text-[#391D00] hover:text-[#CFAC6A]" />
                           {field.value ? (
                             format(field.value, "PPP")
                           ) : (
-                            <span className="text-[#391D00]">Pick a date</span>
+                            <span className="text-[#391D00] hover:text-[#CFAC6A]">
+                              Pick a date
+                            </span>
                           )}
                         </Button>
                       </FormControl>
