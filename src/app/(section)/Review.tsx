@@ -63,10 +63,10 @@ const Reviews = ({}) => {
     // };
   }, []);
   return (
-    <section className="relative flex h-full w-full bg-[#391D00] px-4 pb-8 md:px-0">
+    <section className="relative flex h-full w-full bg-[#391D00] px-4 pb-20 md:px-0">
       <div className="flex h-full w-full flex-col items-start justify-center gap-4 py-12 md:py-24">
         <div className="flex h-full w-full flex-col items-start justify-center gap-2 lg:gap-4">
-          <div className="flex w-full flex-col items-center justify-center gap-4">
+          <div className="flex w-full flex-col items-center justify-center gap-4 md:pb-8">
             <div className="flex flex-col items-center justify-center gap-2">
               <h6 className="rounded-full px-8 py-2 font-marcellus text-base font-[400] capitalize text-[#C4AB85] ring-1 ring-[#C4AB85] lg:text-lg">
                 Reviews{" "}
@@ -79,7 +79,7 @@ const Reviews = ({}) => {
         </div>
         <div className="flex w-full items-center justify-center p-4 md:p-0">
           {reviews && (
-            <Carousel className="w-full px-4 md:px-0">
+            <Carousel className="w-full px-0">
               <CarouselContent className="ml-4 flex w-full justify-center gap-4">
                 {reviews.map((review, index) => (
                   <CarouselItem
@@ -99,19 +99,19 @@ const Reviews = ({}) => {
                       </div>
                       <div className="pt-4">
                         <p className="font-playfair line-clamp-5 text-center text-sm font-[400] tracking-[0.48px] text-[#C4AB85] lg:text-base">
-                          {review.text}
+                          {review.text.text}
                         </p>
                       </div>
                       <div className="flex flex-col gap-2 pt-4">
                         <p className="text-center font-inter text-sm font-[500] tracking-[0.54px] text-[#C4AB85]">
-                          {review.author_name}
+                          {review.authorAttribution.displayName}
                         </p>
                       </div>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="group absolute -bottom-16 left-1/2 flex w-fit -translate-x-1/2 transform items-center gap-2 pb-6 transition-transform duration-300 ease-in-out lg:pb-0">
+              <div className="group absolute -bottom-16 left-1/2 z-50 flex w-fit -translate-x-1/2 transform items-center gap-2 pb-6 transition-transform duration-300 ease-in-out lg:pb-0">
                 <CarouselPrevious className="border-[#C4AB85] text-[#C4AB85] transition-transform duration-300 ease-in-out group-hover:-translate-x-2" />
                 <CarouselNext className="border-[#C4AB85] text-[#C4AB85] transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
               </div>

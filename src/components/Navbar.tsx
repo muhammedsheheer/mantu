@@ -109,7 +109,7 @@ const Navbar = ({
               />{" "}
               About
             </Link>
-            <Link
+            {/* <Link
               href={""}
               className={
                 pathname === "/"
@@ -125,7 +125,7 @@ const Navbar = ({
                 className="h-4 w-2"
               />{" "}
               Food & Drinks
-            </Link>
+            </Link> */}
             <Link
               href={"/table-booking"}
               className={

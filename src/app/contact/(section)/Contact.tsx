@@ -91,19 +91,13 @@ const Contact = ({}) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link
-                    href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
-                    target="_blank"
-                  >
+                  <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
                     <p className="text-[#391D00]">
-                      2 Kendal Ave, London W3 0PA,
-                      <br /> United Kingdom
+                      228 Station Road <br />
+                      Edgware HA8 7AU
                     </p>
                   </Link>
-                  <Link
-                    href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
-                    target="_blank"
-                  >
+                  <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
                     <p className="flex items-center gap-2 text-sm text-[#391D00]">
                       <span>Get Direction</span>
                       <ArrowRight className="text-[#391D00]" />
@@ -140,18 +134,15 @@ const Contact = ({}) => {
                 >
                   <Icons.instagram className="text-[#391D00]" />
                 </Link>
-                <Link
+                {/* <Link
                   href={
                     "https://www.tripadvisor.com/ShowUserReviews-g1646063-d2012817-r750556155-Kabul_City_Restaurant-Edgware_Greater_London_England.html"
                   }
                   target="_blank"
                 >
                   <Icons.unknown className="text-[#391D00]" />
-                </Link>
-                <Link
-                  href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
-                  target="_blank"
-                >
+                </Link> */}
+                <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
                   <Icons.google className="text-[#391D00]" />
                 </Link>
                 {/* <Link href='https://www.facebook.com/Istanbulwoolton/'>

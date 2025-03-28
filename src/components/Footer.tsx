@@ -24,6 +24,11 @@ const Footer = ({}) => {
           <div className="w-full border-b-[1px] border-b-[rgba(236,230,214,0.10)]" />
           <div className="flex flex-col gap-10 md:flex-row md:gap-32">
             <div className="flex flex-col gap-4 px-6 md:gap-6 md:px-3">
+              <Link href={"/"}>
+                <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
+                  Home
+                </span>
+              </Link>
               <Link href={"/about-us"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   About
@@ -34,24 +39,19 @@ const Footer = ({}) => {
                   our menu
                 </span>
               </Link>
-              <Link href={""}>
+              {/* <Link href={""}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   Specials
                 </span>
-              </Link>
+              </Link> */}
               <Link href={"/contact"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   Contact
                 </span>
               </Link>
-              <Link href={""}>
+              <Link href={"/table-booing"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
-                  careers
-                </span>
-              </Link>
-              <Link href={""}>
-                <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
-                  Privacy Policy
+                  Booking
                 </span>
               </Link>
             </div>
@@ -61,7 +61,10 @@ const Footer = ({}) => {
               </span>
               <div className="flex flex-col gap-2">
                 <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
-                  Every day 12 PM till 11 PM
+                  Mon-Thu 2-11pm
+                </span>
+                <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
+                  Fri-Sun 4-11pm
                 </span>
               </div>
             </div>
@@ -82,10 +85,7 @@ const Footer = ({}) => {
               Address{" "}
             </span>
             <div className="flex flex-col gap-1 md:items-center md:justify-center">
-              <Link
-                href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
-                target="_blank"
-              >
+              <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
                 <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff] md:text-center">
                   228 Station Road <br />
                   Edgware HA8 7AU
@@ -93,7 +93,7 @@ const Footer = ({}) => {
               </Link>
               <Link href={"tel:02039744620"}>
                 <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff] md:text-center">
-                  +020 3974 4620
+                  020 3974 4620{" "}
                 </span>
               </Link>
               <Link href={"mailto:Hello@manturestaurant.co.uk"}>
@@ -110,23 +110,20 @@ const Footer = ({}) => {
             >
               <Icons.instagram className="text-[#fff]" />
             </Link>
-            <Link
-              href={"https://maps.app.goo.gl/BYHYfdDnuW2L91ge7"}
-              target="_blank"
-            >
+            <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
               <Icons.google className="text-[#fff]" />
             </Link>
-            <Link
+            {/* <Link
               href={
                 "https://www.tripadvisor.com/ShowUserReviews-g1646063-d2012817-r750556155-Kabul_City_Restaurant-Edgware_Greater_London_England.html"
               }
               target="_blank"
             >
               <Icons.unknown className="text-[#fff]" />
-            </Link>
+            </Link> */}
           </div>
           <div>
-            <Link href={""} target="_blank">
+            <Link href={"https://foodo.ai/"} target="_blank">
               <span className="font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff] md:text-center">
                 Powerd by foodo{" "}
               </span>
