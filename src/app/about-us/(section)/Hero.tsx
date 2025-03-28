@@ -18,7 +18,7 @@ const Hero = ({}) => {
                 blending tradition with modern culinary artistry. Each dish is
                 crafted with authentic spices, handpicked ingredients, and
                 time-honored recipes to bring you an unforgettable dining
-                experience. Whether you're savoring our signature mantu
+                experience. Whether you`re savoring our signature mantu
                 dumplings or indulging in a flavorful Afghan delicacy, every
                 bite tells a story of authenticity, passion, and excellence.
               </p>
