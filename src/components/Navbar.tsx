@@ -170,7 +170,7 @@ const Navbar = ({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`flex flex-row items-center justify-center gap-1 font-open_sans text-xs font-[400] uppercase leading-[25px] tracking-[1.6px] transition duration-300 ${isWhiteText ? "text-[#fff]" : "text-[#000]"} ${!isHome && isActive ? "border-b-[2px] border-[#5A340D]" : ""} ${!isHome && !isActive ? "border-b-[2px] border-transparent hover:border-[#5A340D]" : ""} `}
+                  className={`flex flex-row items-center justify-center gap-1 font-open_sans text-xl font-[400] uppercase leading-[25px] tracking-[1.6px] transition duration-300 ${isWhiteText ? "text-[#fff]" : "text-[#000]"} ${!isHome && isActive ? "border-b-[2px] border-[#5A340D]" : ""} ${!isHome && !isActive ? "border-b-[2px] border-transparent hover:border-[#5A340D]" : ""} `}
                 >
                   <Image
                     src={"/images/home/hero/dot.png"}

@@ -89,6 +89,13 @@ const Hero: React.FC = () => {
           />
         </Link>
       </div>
+      <div className="absolute right-[8%] top-14 z-50 hidden md:block">
+        <Link href={"/table-booking"}>
+          <Button className="rounded-none bg-[#E7C681] px-8 py-7 font-cormorant text-sm font-[700] uppercase tracking-[2px] text-[#5A340D] hover:bg-[#e7cc93] md:tracking-[4.6]">
+            Book Now
+          </Button>
+        </Link>
+      </div>
 
       {/* Main Content */}
       <div className="relative z-20 flex h-full flex-col items-center justify-center gap-3 text-white md:mt-8">
@@ -96,7 +103,7 @@ const Hero: React.FC = () => {
           Authentic <br /> Afghan Cuisine
         </h1>
 
-        <div className="mt-4 md:mt-8">
+        <div className="mt-4 md:mt-8 md:hidden">
           <Link href={"/table-booking"}>
             <Button className="rounded-none bg-[#E7C681] px-8 py-7 font-cormorant text-sm font-[700] uppercase tracking-[2px] text-[#5A340D] hover:bg-[#e7cc93] md:tracking-[4.6]">
               Book Now
