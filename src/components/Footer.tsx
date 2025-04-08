@@ -49,7 +49,7 @@ const Footer = ({}) => {
                   Contact
                 </span>
               </Link>
-              <Link href={"/table-booing"}>
+              <Link href={"/table-booking"}>
                 <span className="text-center font-cormorant text-sm font-[700] uppercase tracking-[3.96px] text-[#fff]">
                   Booking
                 </span>

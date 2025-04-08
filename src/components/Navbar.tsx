@@ -26,6 +26,14 @@ const Navbar = ({
     }
   }, [positiond]);
   const pathname = usePathname();
+
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "Menu", href: "/menu" },
+    { name: "About", href: "/about-us" },
+    { name: "Reservation", href: "/table-booking" },
+    { name: "Contact Us", href: "/contact" },
+  ];
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -51,7 +59,7 @@ const Navbar = ({
               : "flex flex-row items-center justify-center"
           }
         >
-          <div
+          {/* <div
             className={
               pathname === "/"
                 ? "flex flex-col items-start gap-8"
@@ -109,23 +117,6 @@ const Navbar = ({
               />{" "}
               About
             </Link>
-            {/* <Link
-              href={""}
-              className={
-                pathname === "/"
-                  ? "flex flex-row items-center justify-center gap-1 font-open_sans text-xs font-[400] uppercase leading-[25px] tracking-[1.6px] text-[#fff]"
-                  : "flex flex-row items-center justify-center gap-1 font-open_sans text-xs font-[400] uppercase leading-[25px] tracking-[1.6px] text-[#000]"
-              }
-            >
-              <Image
-                src={"/images/home/hero/dot.png"}
-                width={281}
-                height={74}
-                alt="logo"
-                className="h-4 w-2"
-              />{" "}
-              Food & Drinks
-            </Link> */}
             <Link
               href={"/table-booking"}
               className={
@@ -160,7 +151,66 @@ const Navbar = ({
               />{" "}
               Contact Us
             </Link>
+          </div> */}
+
+          <div
+            className={
+              pathname === "/"
+                ? "flex flex-col items-start gap-8"
+                : "mt-2 flex flex-row items-center justify-center gap-14"
+            }
+          >
+            {links.map((link) => {
+              const isHome = link.href === "/";
+              const isActive = pathname === link.href;
+              const isWhiteText =
+                pathname === "/" || pathname === "/table-booking";
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`flex flex-row items-center justify-center gap-1 font-open_sans text-xs font-[400] uppercase leading-[25px] tracking-[1.6px] transition duration-300 ${isWhiteText ? "text-[#fff]" : "text-[#000]"} ${!isHome && isActive ? "border-b-[2px] border-[#5A340D]" : ""} ${!isHome && !isActive ? "border-b-[2px] border-transparent hover:border-[#5A340D]" : ""} `}
+                >
+                  <Image
+                    src={"/images/home/hero/dot.png"}
+                    width={281}
+                    height={74}
+                    alt="dot"
+                    className="h-4 w-2"
+                  />
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
+
+          {/* <div
+            className={
+              pathname === "/"
+                ? "flex flex-col items-start gap-8"
+                : "mt-2 flex flex-row items-center justify-center gap-14"
+            }
+          >
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`flex flex-row items-center justify-center gap-1 font-open_sans text-xs font-[400] uppercase leading-[25px] tracking-[1.6px] transition duration-300 ${
+                  pathname === "/" ? "text-[#fff]" : "text-[#000]"
+                } ${pathname === link.href ? "border-b-[1px] border-[#fff]" : "border-b-[1px] border-transparent hover:border-[#CFAC6A]"}`}
+              >
+                <Image
+                  src={"/images/home/hero/dot.png"}
+                  width={281}
+                  height={74}
+                  alt="dot"
+                  className="h-4 w-2"
+                />
+                {link.name}
+              </Link>
+            ))}
+          </div> */}
         </div>
       </div>
 
