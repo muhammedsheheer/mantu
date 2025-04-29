@@ -11,7 +11,8 @@ const JoinUs = ({}) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex h-full w-full flex-col-reverse items-center justify-center gap-4 md:flex-row">
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="z-50 flex h-full w-full flex-col-reverse items-center justify-center gap-4 md:flex-row">
         <div className="flex h-full w-full flex-col items-center justify-center gap-[2.5rem] p-6">
           <h1 className="font-oswald max-w-[500px] text-center text-5xl leading-[60px] text-[#fff]">
             Join Us for an

@@ -2,14 +2,26 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Reserve: React.FC = () => {
   return (
     <section className="relative h-screen w-full bg-[#CFAC6A] pt-12">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
       <div className="absolute inset-0 bottom-[65%] flex items-center justify-center px-4 md:bottom-[60%]">
         <div className="relative">
           <div className="absolute inset-0 top-[15%] flex items-center justify-center md:top-[15%]">
-            <div className="mt-24 flex flex-col items-center justify-center gap-4 md:mt-32 md:gap-6">
+            <motion.div
+              className="mt-24 flex flex-col items-center justify-center gap-4 md:mt-32 md:gap-6"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               <h1 className="text-center font-marcellus text-2xl font-[400] uppercase tracking-[10px] text-[#F5CA71] md:text-3xl">
                 Reserve <br />
                 Your Table
@@ -24,7 +36,7 @@ const Reserve: React.FC = () => {
                   Book Now{" "}
                 </Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
           <Image
             src={"/images/home/reserve/image.png"}

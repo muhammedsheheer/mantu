@@ -2,13 +2,20 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Story: React.FC = () => {
   return (
     <section className="h-full w-full bg-[#fff]">
       <div className="flex w-full flex-col gap-0">
         <div className="flex w-full flex-col gap-0 md:flex-row">
-          <div className="flex w-full flex-col items-start justify-center gap-5 bg-[#41250A] px-10 py-20 md:w-[40%] md:px-20">
+          <motion.div
+            className="flex w-full flex-col items-start justify-center gap-5 bg-[#41250A] px-10 py-20 md:w-[40%] md:px-20"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <h3 className="font-marcellus text-2xl font-[400] capitalize text-[#fff] md:text-3xl">
               Scroll our Story
             </h3>
@@ -24,8 +31,14 @@ const Story: React.FC = () => {
                 @mantu.london{" "}
               </Button>
             </Link>
-          </div>
-          <div className="flex w-full items-center justify-center bg-[#57320C] px-10 py-12 md:w-[30%] md:px-20">
+          </motion.div>
+          <motion.div
+            className="flex w-full items-center justify-center bg-[#57320C] px-10 py-12 md:w-[30%] md:px-20"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <Image
               src={"/images/home/story/image1.png"}
               width={281}
@@ -33,8 +46,14 @@ const Story: React.FC = () => {
               alt="image"
               className="h-[300px] w-full md:h-[350px]"
             />
-          </div>
-          <div className="w-full md:w-[30%]">
+          </motion.div>
+          <motion.div
+            className="w-full md:w-[30%]"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <Image
               src={"/images/home/story/image2.png"}
               width={281}
@@ -42,10 +61,16 @@ const Story: React.FC = () => {
               alt="image"
               className="h-full w-full"
             />
-          </div>
+          </motion.div>
         </div>
         <div className="flex w-full flex-col gap-0 md:flex-row">
-          <div className="w-full md:w-[30%]">
+          <motion.div
+            className="w-full md:w-[30%]"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <Image
               src={"/images/home/story/image3.png"}
               width={281}
@@ -53,8 +78,14 @@ const Story: React.FC = () => {
               alt="image"
               className="h-[350px] w-full md:h-[450px]"
             />
-          </div>
-          <div className="w-full md:w-[40%]">
+          </motion.div>
+          <motion.div
+            className="w-full md:w-[40%]"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <Image
               src={"/images/home/story/image4.png"}
               width={281}
@@ -62,8 +93,14 @@ const Story: React.FC = () => {
               alt="image"
               className="h-[350px] w-full md:h-[450px]"
             />
-          </div>
-          <div className="flex w-full items-center justify-center bg-[#F6CA6F] px-10 py-12 md:w-[30%] md:px-20">
+          </motion.div>
+          <motion.div
+            className="flex w-full items-center justify-center bg-[#F6CA6F] px-10 py-12 md:w-[30%] md:px-20"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <Image
               src={"/images/home/story/image5.png"}
               width={281}
@@ -71,7 +108,7 @@ const Story: React.FC = () => {
               alt="image"
               className="h-[300px] w-full md:h-[350px]"
             />
-          </div>{" "}
+          </motion.div>{" "}
         </div>
       </div>
     </section>

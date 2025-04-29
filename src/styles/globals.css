@@ -91,18 +91,18 @@
 
   /* menu Checkout Start */
 
-  --menubackground: 39.21, 51.27%, 61.37%;
+  --menubackground: 42, 38.46%, 94.9%;
   --menuforeground: 0, 0%, 0%;
-  --menuprimary: 37, 36%, 65%;
-  --menusecondary: 0, 2%, 97%;
+  --menuprimary: 39.21, 51.27%, 61.37%;
+  --menusecondary: 39.21, 51.27%, 61.37%;
   --buttonhover: 37, 32%, 50%;
-  --itembackground: 30.39, 74.76%, 20.2%;
+  --itembackground: 0, 0%, 100%;
   --menuprimaryforeground: 39, 100%, 93%;
   --menusecondaryforeground: 0, 0%, 20%;
-  --itemdescription: 0, 2%, 48%;
+  --itemdescription: 39.21, 51.27%, 61.37%;
   --itembutton: 37, 36%, 65%;
   --buttondisabled: 0, 0%, 29%;
-  --mobilebg: 194, 38%, 9%;
+  --mobilebg: 42, 38.46%, 94.9%;
   --menuwhite: 0, 0%, 100%;
   --borderinput: 0, 0%, 56%;
   --tabbg: 37, 33%, 81%;

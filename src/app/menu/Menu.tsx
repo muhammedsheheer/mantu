@@ -238,7 +238,7 @@ export default function Menu() {
   }, []);
 
   return (
-    <section className="bg-menubg mt-8 flex w-full max-w-[1300px] flex-row">
+    <section className="bg-menubg mt-8 flex w-full flex-row px-40">
       {/* {(!restaurant?.isTakeAwayEnabled && restaurant?.isDeliveryEnabled) && (
                 <DeliveryCheck setOrderType={setOrderType} />
             )} */}
@@ -260,7 +260,7 @@ export default function Menu() {
           </div> */}
         </div>
         {/* Categories */}
-        <div className="sticky top-0 z-10 flex items-center bg-[#5A340D] px-4 py-2">
+        <div className="sticky top-0 z-10 flex items-center bg-menubackground px-4 py-2">
           <div
             ref={categoryNavRef}
             className="hidden-scrollbar flex overflow-x-auto py-2"

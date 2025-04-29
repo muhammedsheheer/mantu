@@ -1,9 +1,15 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Upscale: React.FC = () => {
   return (
     <section className="relative h-full w-full bg-[#CFAC6A] pb-28 pt-28 md:pb-60 md:pt-20">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
       <div className="absolute bottom-[28%] right-[10%] z-40 hidden flex-col gap-8 md:flex">
         <p className="max-w-[250px] font-marcellus text-base font-[400] text-[#5A340D]">
           Bringing the Flavors of Afghanistan to Your Table Indulge in the rich
@@ -60,7 +66,13 @@ const Upscale: React.FC = () => {
       </div>
       <div className="relative z-40 flex flex-col items-center justify-center gap-4">
         <div className="relative">
-          <div className="relative z-40">
+          <motion.div
+            className="relative z-40"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <div className="relative z-50">
               <Image
                 src={"/images/home/upscale/image.png"}
@@ -80,16 +92,22 @@ const Upscale: React.FC = () => {
                 className="h-[70%] w-[80%]"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="px-2 md:px-0">
+        <motion.div
+          className="px-2 md:px-0"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <p className="w-full max-w-[650px] text-center font-marcellus text-sm font-[400] uppercase tracking-[5px] text-[#5A340D] md:text-base">
             a refined Afghan dining experience where the aromatic spices of the
             northern valleys intertwine with the bold, earthy flavors of the
             southern deserts.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
