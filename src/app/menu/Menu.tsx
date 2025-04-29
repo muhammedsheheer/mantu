@@ -503,9 +503,7 @@ export default function Menu() {
                                   (i) => i._id === modifier._idMenuItem,
                                 )?.name;
                                 if (name) {
-                                  if (!acc[name]) {
-                                    acc[name] = { ...modifier, count: 0 };
-                                  }
+                                  acc[name] ??= { ...modifier, count: 0 };
                                   acc[name].count += 1;
                                 }
                                 return acc;
