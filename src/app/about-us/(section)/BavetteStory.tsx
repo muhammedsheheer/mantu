@@ -1,26 +1,44 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const BavetteStory = ({}) => {
   return (
-    <section className="relative flex h-full w-full items-center justify-center bg-[#391D00] p-4 lg:py-16">
-      <div className="flex h-full w-full flex-col items-center justify-center gap-11 bg-[#391D00]">
-        <h2 className="font-oswald text-center text-8xl text-[#CFAC6A] md:left-[15%] md:text-8xl">
+    <section className="relative flex h-full w-full items-center justify-center bg-[#000] p-4 lg:py-16">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-11 bg-[#000]">
+        <motion.h2
+          className="text-center font-oswald text-8xl text-[#CFAC6A] md:left-[15%] md:text-8xl"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           The Mantu
           <br />
           Story
-        </h2>
-        <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[#391D00] md:flex-row lg:px-24 lg:py-20">
+        </motion.h2>
+        <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[#000] md:flex-row lg:px-24 lg:py-20">
           <div className="h-full w-full overflow-hidden p-4 md:w-1/2 md:p-0">
-            <Image
+            <motion.img
               src="/images/about-us/image2.jpg"
               width={577}
               height={676}
               alt="private dining"
               className="h-auto w-full rounded-lg md:rounded-none"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
             />
           </div>
-          <div className="flex h-full w-full flex-col items-center gap-[2.5rem] p-6 md:w-1/2 md:items-start lg:ml-24">
-            <h1 className="font-oswald max-w-[500px] text-center text-6xl text-[#CFAC6A] sm:text-7xl md:text-start">
+          <motion.div
+            className="flex h-full w-full flex-col items-center gap-[2.5rem] p-6 md:w-1/2 md:items-start lg:ml-24"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            <h1 className="max-w-[500px] text-center font-oswald text-6xl text-[#CFAC6A] sm:text-7xl md:text-start">
               From Passion
               <br />
               to Perfection{" "}
@@ -41,7 +59,7 @@ const BavetteStory = ({}) => {
               the same: to honor tradition, embrace creativity, and deliver a
               truly unforgettable dining experience.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

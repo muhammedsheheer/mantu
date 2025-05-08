@@ -29,40 +29,40 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
               className="w-28"
             />
           </SheetTitle>
-          <SheetDescription className="flex w-full flex-col items-start justify-start gap-7 pt-14">
+          <SheetDescription className="flex w-full flex-col items-center justify-center gap-7 pt-14">
             <Link
               href="/"
-              className="font-playfair flex w-full justify-start p-0 text-2xl font-normal text-[#323232]"
+              className="flex w-full justify-center p-0 text-center font-open_sans text-2xl font-normal text-[#fff]"
             >
               Home
             </Link>
             <Link
               href="/menu"
-              className="font-playfair flex w-full justify-start p-0 text-2xl font-normal text-[#323232]"
+              className="flex w-full justify-center p-0 text-center font-open_sans text-2xl font-normal text-[#fff]"
             >
               Menu
             </Link>
             <Link
               href="/about-us"
-              className="font-playfair flex w-full justify-start p-0 text-2xl font-normal text-[#323232]"
+              className="flex w-full justify-center p-0 text-center font-open_sans text-2xl font-normal text-[#fff]"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="font-playfair flex w-full justify-start p-0 text-2xl font-normal text-[#323232]"
+              className="flex w-full justify-center p-0 text-center font-open_sans text-2xl font-normal text-[#fff]"
             >
               Contact
             </Link>
             <Link
               href="/table-booking"
-              className="font-playfair flex w-full justify-start p-0 text-2xl font-normal text-[#323232]"
+              className="flex w-full justify-center p-0 text-center font-open_sans text-2xl font-normal text-[#fff]"
             >
               Table Booking
             </Link>
             {/* <Link
               href=""
-              className="font-playfair flex w-full justify-start p-0 text-2xl font-normal text-[#323232]"
+              className="font-open_sans flex w-full justify-center p-0 text-2xl font-normal text-[#fff] text-center"
             >
               Food & Drinks
             </Link> */}

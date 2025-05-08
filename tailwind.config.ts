@@ -8,20 +8,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        roboto: ["var(--font-roboto)", ...fontFamily.sans],
+        oswald: ["var(--font-oswald)", ...fontFamily.sans],
+        playfair: ["var(--font-playfair)", ...fontFamily.sans],
+        manrope: ["var(--font-manrope)", ...fontFamily.sans],
         inter: ["var(--font-inter)", ...fontFamily.sans],
-        open_sans: ["var(--font-open_sans)", ...fontFamily.sans],
-        cormorant: ["var(--font-cormorant)", ...fontFamily.sans],
-        marcellus: ["var(--font-marcellus)", ...fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      backgroundImage: {
-        "button-bg": "url('/images/buttonbg.png')",
-        "button-hover": "url('/images/buttonhover.png')",
-        "button-bg-inverted": "url('/images/buttonInvertedBg.png')",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -64,27 +60,6 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        menubackground: "hsl(var(--menubackground))",
-        menuprimary: {
-          DEFAULT: "hsl(var(--menuprimary))",
-          foreground: "hsl(var(--menuprimaryforeground))",
-        },
-        menuforeground: "hsl(var(--menuforeground))",
-        menusecondary: {
-          DEFAULT: "hsl(var(--menusecondary))",
-          foreground: "hsl(var(--menusecondaryforeground))",
-        },
-        buttonhover: "hsl(var(--buttonhover))",
-        itembackground: "hsl(var(--itembackground))",
-        itemdescription: "hsl(var(--itemdescription))",
-        itembutton: "hsl(var(--itembutton))",
-        buttondisabled: "hsl(var(--buttondisabled))",
-        mobilebg: "hsl(var(--mobilebg))",
-        menuwhite: "hsl(var(--menuwhite))",
-        borderinput: "hsl(var(--borderinput))",
-        tabbg: "hsl(var(--tabbg))",
-        inputbg: "hsl(var(--inputbg))",
-        placeholder: "hsl(var(--placeholder))",
       },
     },
   },

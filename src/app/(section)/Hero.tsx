@@ -1,110 +1,57 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const lines = ["Authentic", "Afghan Cuisine"];
-const letterVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, type: "spring", stiffness: 300 },
-  }),
-};
-
-const Hero: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry?.isIntersecting) {
-          setInView(false);
-          setTimeout(() => setInView(true), 50);
-        }
-      },
-      { threshold: 0.5 },
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
-  }, []);
-
+const Hero = ({}) => {
   return (
-    <section
-      className="relative h-screen w-full overflow-hidden bg-[#fff]"
-      ref={sectionRef}
-    >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute left-0 top-0 z-0 h-full w-full object-cover"
-      >
-        <source src="/videos/bg.mp4" type="video/mp4" />
-        <source src="/videos/bg.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div className="absolute inset-0 z-10 bg-black/50"></div>
-
-      <div className="absolute inset-0 top-14 z-20 hidden justify-center md:flex">
-        <Link href={"/"}>
-          <Image
-            src={"/images/home/hero/logo.png"}
-            width={281}
-            height={74}
-            alt="logo"
-            className="w-44"
-          />
-        </Link>
-      </div>
-      <div className="absolute right-[8%] top-14 z-50 hidden md:block">
-        <Link href={"/table-booking"}>
-          <Button className="rounded-none bg-[#E7C681] px-8 py-7 font-cormorant text-sm font-[700] uppercase tracking-[2px] text-[#5A340D] hover:bg-[#e7cc93] md:tracking-[4.6]">
-            Book Now
-          </Button>
-        </Link>
-      </div>
-
-      <div className="relative z-20 flex h-full flex-col items-center justify-center gap-3 text-white md:mt-8">
-        <div className="space-y-2 text-center">
-          {inView &&
-            lines.map((line, lineIndex) => (
-              <h1
-                key={lineIndex}
-                className="font-cormorant text-5xl font-[400] uppercase tracking-[5px] text-[#fff] drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] md:text-7xl"
-              >
-                {[...line].map((letter, i) => (
-                  <motion.span
-                    key={i}
-                    custom={i + lineIndex * 10}
-                    initial="hidden"
-                    animate="visible"
-                    variants={letterVariants}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </h1>
-            ))}
+    <section className="flex h-screen w-full items-center justify-center">
+      <div className="relative flex h-screen w-full items-center justify-center bg-black">
+        <div className="absolute left-0 top-0 z-10 h-full w-full bg-black/20"></div>
+        <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
+          <video
+            className="min-h-full min-w-full object-cover"
+            style={{ objectPosition: "center" }}
+            src="/videos/bg.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
         </div>
-
-        <div className="mt-4 md:mt-8 md:hidden">
-          <Link href={"/table-booking"}>
-            <Button className="rounded-none bg-[#E7C681] px-8 py-7 font-cormorant text-sm font-[700] uppercase tracking-[2px] text-[#5A340D] hover:bg-[#e7cc93] md:tracking-[4.6]">
-              Book Now
-            </Button>
-          </Link>
+        <div className="absolute inset-0 z-0 bg-black/50" />
+        <div className="z-40 flex h-full w-full items-center justify-center">
+          <motion.div
+            className="flex w-full flex-col items-center justify-center gap-7"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            <motion.h1
+              className="text-center font-oswald text-4xl font-[400] tracking-[8px] sm:text-5xl md:text-8xl"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              style={{
+                background:
+                  "linear-gradient(194deg, #CDAE64 50.51%, #050504 117.48%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Authentic, <br />
+              Afghan Cuisine
+            </motion.h1>
+            <div className="ml-[2%] flex flex-col items-center justify-center gap-3">
+              <Link href="/table-booking">
+                <Button className="hero-button flex items-center justify-center gap-3 rounded-none px-9 py-6 uppercase">
+                  Reserve
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

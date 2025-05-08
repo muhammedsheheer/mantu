@@ -79,7 +79,7 @@
   --primary-foreground: 33, 100%, 96%;
   --secondary: 39.21, 51.27%, 61.37%;
   --secondary-foreground: 33, 100%, 96%;
-  --muted: 51 100% 20%;
+  --muted: 0 0% 100%;
   --muted-foreground: 39.21, 51.27%, 61.37%;
   --accent: 195, 36.36%, 4.31%;
   --accent-foreground: 33, 100%, 96%;
@@ -91,18 +91,18 @@
 
   /* menu Checkout Start */
 
-  --menubackground: 42, 38.46%, 94.9%;
+  --menubackground: 0, 0%, 0%;
   --menuforeground: 0, 0%, 0%;
   --menuprimary: 39.21, 51.27%, 61.37%;
   --menusecondary: 39.21, 51.27%, 61.37%;
   --buttonhover: 37, 32%, 50%;
-  --itembackground: 0, 0%, 100%;
+  --itembackground: 42, 38.46%, 94.9%;
   --menuprimaryforeground: 39, 100%, 93%;
   --menusecondaryforeground: 0, 0%, 20%;
   --itemdescription: 39.21, 51.27%, 61.37%;
   --itembutton: 37, 36%, 65%;
   --buttondisabled: 0, 0%, 29%;
-  --mobilebg: 42, 38.46%, 94.9%;
+  --mobilebg: 0, 0%, 0%;
   --menuwhite: 0, 0%, 100%;
   --borderinput: 0, 0%, 56%;
   --tabbg: 37, 33%, 81%;

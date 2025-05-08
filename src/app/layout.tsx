@@ -1,45 +1,51 @@
 import "@/styles/globals.css";
-import "@/styles/lines.css";
 import "@/styles/ham.css";
+
 import { cn } from "@/lib/utils";
 import { type Metadata } from "next";
 import {
-  Open_Sans,
+  Oswald,
+  Roboto,
+  Playfair_Display,
+  Manrope,
   Inter,
-  Oooh_Baby,
-  Cormorant,
-  Marcellus_SC,
 } from "next/font/google";
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
   title: "Mantu",
   description: "Mantu",
-  icons: [{ rel: "icon", url: "/images/home/hero/logo.png", sizes: "11x11" }],
+  icons: [{ rel: "icon", url: "/images/logo.png" }],
 };
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400"],
-});
-
-const open_sans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open_sans",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const cormorant = Cormorant({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["400", "500", "600", "700"],
-});
-
-const marcellus = Marcellus_SC({
-  subsets: ["latin"],
-  variable: "--font-marcellus",
-  weight: ["400"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({
@@ -49,11 +55,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "theme-custom flex min-h-screen font-inter antialiased",
-          open_sans.variable,
+          "theme-custom font-roboto flex min-h-screen bg-[#070707] text-[#FBEAD2] antialiased",
+          manrope.variable,
+          roboto.variable,
+          playfair.variable,
+          oswald.variable,
           inter.variable,
-          cormorant.variable,
-          marcellus.variable,
         )}
       >
         <Providers>{children}</Providers>

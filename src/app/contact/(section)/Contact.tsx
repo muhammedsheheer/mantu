@@ -68,17 +68,17 @@ const Contact = ({}) => {
 
   return (
     <section
-      className="flex h-full w-full flex-col items-center justify-center bg-[#CFAC6A]"
+      className="flex h-full w-full flex-col items-center justify-center bg-[#000]"
       id="contact"
     >
       <div className="flex h-full w-full max-w-[1300px] flex-col gap-[2.5rem] px-0 py-12 pl-0 md:px-2 md:py-24">
         <div className="flex w-full flex-col lg:flex-row">
-          <div className="flex w-full flex-col gap-8 bg-[#CFAC6A] px-6 lg:w-1/2 lg:px-28">
+          <div className="flex w-full flex-col gap-8 bg-[#000] px-6 lg:w-1/2 lg:px-28">
             <div className="flex flex-col gap-8">
-              {/* <p className="font-bai text-lg leading-[4px] text-[#391D00]">
+              {/* <p className="font-bai text-lg leading-[4px] text-[#CFAC6A]">
                 Contact Us
               </p> */}
-              <h1 className="font-forum text-4xl font-medium uppercase leading-[50px] tracking-[5px] text-[#391D00] lg:text-5xl">
+              <h1 className="font-forum text-4xl font-medium uppercase leading-[50px] tracking-[5px] text-[#CFAC6A] lg:text-5xl">
                 Get in
                 <br /> Touch
               </h1>
@@ -87,20 +87,20 @@ const Contact = ({}) => {
               <div className="flex gap-6">
                 <div>
                   <div className="h-fit w-fit rounded-full p-2">
-                    <MapPin className="text-[#391D00]" />
+                    <MapPin className="text-[#CFAC6A]" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
                   <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
-                    <p className="text-[#391D00]">
+                    <p className="text-[#CFAC6A]">
                       228 Station Road <br />
                       Edgware HA8 7AU
                     </p>
                   </Link>
                   <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
-                    <p className="flex items-center gap-2 text-sm text-[#391D00]">
+                    <p className="flex items-center gap-2 text-sm text-[#CFAC6A]">
                       <span>Get Direction</span>
-                      <ArrowRight className="text-[#391D00]" />
+                      <ArrowRight className="text-[#CFAC6A]" />
                     </p>
                   </Link>
                 </div>
@@ -118,11 +118,11 @@ const Contact = ({}) => {
               <div className="flex items-center gap-6">
                 <div>
                   <div className="h-fit w-fit rounded-full p-2">
-                    <Phone className="text-[#391D00]" />
+                    <Phone className="text-[#CFAC6A]" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href="tel:02039744620" className="text-[#391D00]">
+                  <Link href="tel:02039744620" className="text-[#CFAC6A]">
                     +020 3974 4620
                   </Link>
                 </div>
@@ -132,7 +132,7 @@ const Contact = ({}) => {
                   href={"https://www.instagram.com/mantu.london"}
                   target="_blank"
                 >
-                  <Icons.instagram className="text-[#391D00]" />
+                  <Icons.instagram className="text-[#CFAC6A]" />
                 </Link>
                 {/* <Link
                   href={
@@ -140,10 +140,10 @@ const Contact = ({}) => {
                   }
                   target="_blank"
                 >
-                  <Icons.unknown className="text-[#391D00]" />
+                  <Icons.unknown className="text-[#CFAC6A]" />
                 </Link> */}
                 <Link href={"https://g.co/kgs/kXL8bGk"} target="_blank">
-                  <Icons.google className="text-[#391D00]" />
+                  <Icons.google className="text-[#CFAC6A]" />
                 </Link>
                 {/* <Link href='https://www.facebook.com/Istanbulwoolton/'>
                   <Icons.facebook />
@@ -151,7 +151,7 @@ const Contact = ({}) => {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col bg-[#CFAC6A] lg:w-1/2 lg:items-center lg:justify-center">
+          <div className="flex w-full flex-col bg-[#000] lg:w-1/2 lg:items-center lg:justify-center">
             <div className="w-full px-3 lg:w-4/5 lg:px-0">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="h-full">
@@ -166,7 +166,7 @@ const Contact = ({}) => {
                               <Input
                                 placeholder="First Name"
                                 {...field}
-                                className="h-12 rounded-xl border-[#f3c163] bg-[#f3c163] text-[#391D00] placeholder:text-[#391D00]"
+                                className="h-12 rounded-xl border-[#fff] bg-[#fff] text-[#CFAC6A] placeholder:text-[#CFAC6A]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -182,7 +182,7 @@ const Contact = ({}) => {
                               <Input
                                 placeholder="Phone"
                                 {...field}
-                                className="h-12 rounded-xl border-[#f3c163] bg-[#f3c163] text-[#391D00] placeholder:text-[#391D00]"
+                                className="h-12 rounded-xl border-[#fff] bg-[#fff] text-[#CFAC6A] placeholder:text-[#CFAC6A]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -198,7 +198,7 @@ const Contact = ({}) => {
                               <Input
                                 placeholder="Email"
                                 {...field}
-                                className="h-12 rounded-xl border-[#f3c163] bg-[#f3c163] text-[#391D00] placeholder:text-[#391D00]"
+                                className="h-12 rounded-xl border-[#fff] bg-[#fff] text-[#CFAC6A] placeholder:text-[#CFAC6A]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -210,14 +210,14 @@ const Contact = ({}) => {
                         name="message"
                         render={({ field }) => (
                           <FormItem className="w-full">
-                            <FormLabel className="text-[#391D00]">
+                            <FormLabel className="text-[#CFAC6A]">
                               Reason for contacting (optional)
                             </FormLabel>
                             <FormControl>
                               <Textarea
                                 placeholder="Your Message"
                                 {...field}
-                                className="h-12 rounded-xl border-[#f3c163] bg-[#f3c163] text-[#391D00] placeholder:text-[#391D00]"
+                                className="h-12 rounded-xl border-[#fff] bg-[#fff] text-[#CFAC6A] placeholder:text-[#CFAC6A]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -228,7 +228,7 @@ const Contact = ({}) => {
                   </div>
                   <div className="flex w-full flex-col pt-7 lg:flex-row">
                     <Button
-                      className="font-bai w-full rounded-2xl bg-[#391D00] py-6 text-[#CFAC6A] hover:bg-[#724314]"
+                      className="font-bai w-full rounded-2xl bg-[#391D00] py-6 text-[#fff] hover:bg-[#724314]"
                       disabled={bookTableMutation.isPending}
                     >
                       Contact US
