@@ -260,7 +260,7 @@ export default function Menu() {
           </div> */}
         </div>
         {/* Categories */}
-        <div className="sticky top-0 z-10 flex items-center bg-menubackground px-4 py-2">
+        <div className="bg-menubackground sticky top-0 z-10 flex items-center px-4 py-2">
           <div
             ref={categoryNavRef}
             className="hidden-scrollbar flex overflow-x-auto py-2"
@@ -281,7 +281,7 @@ export default function Menu() {
                       "shrink-0 rounded-none font-semibold transition-colors",
                       activeCategory === category._id
                         ? "bg-menuprimary text-menuforeground hover:bg-buttonhover"
-                        : "border-[1px] border-menuprimary bg-transparent text-menuprimary hover:bg-menuprimary hover:text-menuforeground",
+                        : "border-menuprimary text-menuprimary hover:bg-menuprimary hover:text-menuforeground border-[1px] bg-transparent",
                       // existCategory.find((categoryid) => categoryid === category._id) !== category._id && "hidden w-0 border-0 px-0 py-0"
                       // category.items.length === 0 && "hidden pb-0 h-0 border-0 px-0 py-0"
                     )}
@@ -354,10 +354,10 @@ export default function Menu() {
         </div>
       </div>
       <div className="hidden w-2/6 flex-col md:flex">
-        <div className="sticky top-0 z-10 h-fit overflow-y-visible bg-itembackground px-4 py-2">
+        <div className="sticky top-0 z-10 h-fit overflow-y-visible bg-[#111] px-4 py-2">
           <div className="scrollbar-none relative flex h-[85vh] flex-col gap-6 overflow-x-auto pb-2">
-            <p className="flex items-center justify-center gap-1 pt-6 text-base font-normal tracking-[1.8px] text-menusecondary">
-              <ShoppingBag fill="#ccad64" className="text-itembackground" />{" "}
+            <p className="text-menusecondary flex items-center justify-center gap-1 pt-6 text-base font-normal tracking-[1.8px]">
+              <ShoppingBag fill="#ccad64" className="text-[#111]" />{" "}
               <span>
                 {orderType === 2 ? "Delivery" : "Collection"} from{" "}
                 {restaurant?.name}
@@ -369,9 +369,9 @@ export default function Menu() {
                 <div className="flex w-full gap-4">
                   <Button
                     className={cn(
-                      "w-full rounded-none border border-menuprimary bg-menubackground text-menuprimary hover:border-menuprimary hover:bg-menubackground hover:text-menuprimary",
+                      "border-menuprimary bg-menubackground text-menuprimary hover:border-menuprimary hover:bg-menubackground hover:text-menuprimary w-full rounded-none border",
                       orderType === 3
-                        ? "rounded-none bg-menuprimary font-bold uppercase text-menuforeground hover:bg-menuprimary hover:text-menuforeground"
+                        ? "bg-menuprimary text-menuforeground hover:bg-menuprimary hover:text-menuforeground rounded-none font-bold uppercase"
                         : "",
                     )}
                     onClick={() => setOrderType(3)}
@@ -381,9 +381,9 @@ export default function Menu() {
                   <DeliveryCheck setOrderType={setOrderType}>
                     <Button
                       className={cn(
-                        "w-full rounded-none border border-menuprimary bg-menubackground text-menuprimary hover:border-menuprimary hover:bg-menubackground hover:text-menuprimary",
+                        "border-menuprimary bg-menubackground text-menuprimary hover:border-menuprimary hover:bg-menubackground hover:text-menuprimary w-full rounded-none border",
                         orderType === 2
-                          ? "rounded-none bg-menuprimary font-bold uppercase text-menuforeground hover:bg-menuprimary hover:text-menuforeground"
+                          ? "bg-menuprimary text-menuforeground hover:bg-menuprimary hover:text-menuforeground rounded-none font-bold uppercase"
                           : "",
                       )}
                       // onClick={() => setOrderType(2)}
@@ -394,7 +394,7 @@ export default function Menu() {
                 </div>
               )}
             <Button
-              className="font-manrope relative flex w-full items-center justify-between rounded-none bg-menuprimary py-6 text-lg font-bold uppercase text-menuforeground hover:bg-buttonhover disabled:bg-buttondisabled disabled:text-menuforeground"
+              className="bg-menuprimary text-menuforeground hover:bg-buttonhover disabled:bg-buttondisabled disabled:text-menuforeground relative flex w-full items-center justify-between rounded-none py-6 font-manrope text-lg font-bold uppercase"
               onClick={() => router.push("/checkout")}
               disabled={
                 cartItems.length === 0 ||
@@ -407,7 +407,7 @@ export default function Menu() {
                 <span className="absolute -top-2 left-4">
                   <Triangle
                     fill="#ccad64"
-                    className="rotate-180 text-menuprimary-foreground"
+                    className="text-menuprimary-foreground rotate-180"
                   />
                 </span>
                 <span className="font-bold">CHECKOUT</span>{" "}
@@ -417,7 +417,7 @@ export default function Menu() {
               </Link>
             </Button>
             {/* Separator */}
-            <div className="h-[1px] w-full rounded-full bg-menuprimary"></div>
+            <div className="bg-menuprimary h-[1px] w-full rounded-full"></div>
 
             <div className="hidden-scrollbar mb-6 flex max-h-[360px] w-full flex-col gap-4 overflow-y-scroll">
               {cartItems.length !== 0 ? (
@@ -428,18 +428,18 @@ export default function Menu() {
                     );
                     return (
                       <div
-                        className="flex w-full flex-col items-start justify-start gap-3 border-b-[0.3px] border-b-menuprimary px-3 py-5"
+                        className="border-b-menuprimary flex w-full flex-col items-start justify-start gap-3 border-b-[0.3px] px-3 py-5"
                         key={index}
                       >
                         <div className="flex w-full items-center justify-between">
                           <div className="flex w-3/4 flex-col items-start justify-start gap-1">
-                            <p className="text-lg font-[700] tracking-[1.8px] text-menusecondary">
+                            <p className="text-menusecondary text-lg font-[700] tracking-[1.8px]">
                               {item?.quantity}&nbsp;&nbsp;{item.name}
                             </p>
                           </div>
                           {menuitem?.price.value
                             ? menuitem?.price.value > 0 && (
-                                <p className="font-[700] text-menuprimary">
+                                <p className="text-menuprimary font-[700]">
                                   {menuitem &&
                                   menuitem.takeawayPrice.value > 0 ? (
                                     <>
@@ -518,11 +518,11 @@ export default function Menu() {
                               className="flex w-full items-center justify-between"
                               key={index}
                             >
-                              <p className="w-[80%] text-sm font-[300] tracking-[1.4px] text-menusecondary">
+                              <p className="text-menusecondary w-[80%] text-sm font-[300] tracking-[1.4px]">
                                 {modifier.count}&nbsp;&nbsp;{name}
                               </p>
                               {modifier.price.value > 0 ? (
-                                <p className="text-sm font-[700] text-menuprimary">
+                                <p className="text-menuprimary text-sm font-[700]">
                                   {getCurrencySymbol(modifier.price.currency)}{" "}
                                   {formattedItemPrice(modifier.price.value)}
                                 </p>
@@ -532,9 +532,9 @@ export default function Menu() {
                             </div>
                           ))}
                         </div>
-                        <p className="w-full text-sm font-[300] tracking-[1.4px] text-menusecondary">
+                        <p className="text-menusecondary w-full text-sm font-[300] tracking-[1.4px]">
                           {item.notes && (
-                            <span className="border-b-[1px] border-b-menusecondary">
+                            <span className="border-b-menusecondary border-b-[1px]">
                               Instructions
                             </span>
                           )}
@@ -544,7 +544,7 @@ export default function Menu() {
                         <div className="flex w-full items-center justify-between pt-6">
                           <Link
                             href={`/cart/${index}`}
-                            className="font-[400] capitalize text-menuprimary underline"
+                            className="text-menuprimary font-[400] capitalize underline"
                           >
                             Edit Item
                           </Link>
@@ -580,7 +580,7 @@ export default function Menu() {
                             >
                               <CircleMinus className="text-menusecondary" />
                             </button>
-                            <p className="text-2xl font-[500] text-menuprimary">
+                            <p className="text-menuprimary text-2xl font-[500]">
                               {item.quantity}
                             </p>
                             <button
@@ -610,16 +610,16 @@ export default function Menu() {
                   })}
                 </div>
               ) : (
-                <p className="w-full text-center text-menusecondary">
+                <p className="text-menusecondary w-full text-center">
                   Your cart is empty! Add items to proceed
                 </p>
               )}
             </div>
 
             {/* Footer */}
-            <div className="absolute bottom-0 left-0 z-30 flex w-full items-center justify-between bg-itembackground">
-              <p className="font-bold text-menuprimary">Subtotal</p>
-              <p className="text-lg font-bold text-menuprimary">
+            <div className="absolute bottom-0 left-0 z-30 flex w-full items-center justify-between bg-[#111]">
+              <p className="text-menuprimary font-bold">Subtotal</p>
+              <p className="text-menuprimary text-lg font-bold">
                 {"£"} {formattedItemPrice(totalAmount)}
               </p>
             </div>
