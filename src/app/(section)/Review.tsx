@@ -21,6 +21,7 @@ const Reviews = ({}) => {
         <div className="line"></div>
         <div className="line"></div>
       </div>
+
       <div className="mb:pt-20 flex h-full w-full flex-col items-start justify-center gap-4 pb-20 pt-8 md:pb-20">
         <div className="flex h-full w-full flex-col items-center justify-center gap-2 lg:gap-4">
           <motion.h1

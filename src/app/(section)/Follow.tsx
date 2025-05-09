@@ -29,7 +29,7 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="z-50 h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover md:h-[350px]"
               />
             </motion.div>
             <motion.div
@@ -67,7 +67,7 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="z-50 h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover md:h-[350px]"
               />
             </motion.div>
             <motion.div
@@ -83,14 +83,28 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="z-50 h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover md:h-[350px]"
               />
             </motion.div>
           </div>
           <div className="flex w-full flex-col gap-4 md:flex-row">
-            <div className="flex w-full items-center justify-center lg:w-[25%]">
+            <motion.div
+              className="w-full lg:w-[25%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               {" "}
-            </div>
+              <Image
+                src={"/images/home/story/image4.png"}
+                width={160}
+                height={160}
+                alt="logo"
+                className="z-50 h-[300px] w-full object-cover md:h-[350px]"
+              />
+            </motion.div>
+
             <motion.div
               className="w-full lg:w-[50%]"
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
@@ -104,13 +118,26 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="z-50 h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover md:h-[350px]"
               />
             </motion.div>
 
-            <div className="flex w-full items-center justify-center lg:w-[25%]">
+            <motion.div
+              className="w-full lg:w-[25%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               {" "}
-            </div>
+              <Image
+                src={"/images/home/story/image2.png"}
+                width={160}
+                height={160}
+                alt="logo"
+                className="z-50 h-[300px] w-full object-cover md:h-[350px]"
+              />
+            </motion.div>
           </div>
         </div>
         {/* mobile screen */}
@@ -128,7 +155,7 @@ const Follow: React.FC = () => {
               width={160}
               height={160}
               alt="logo"
-              className="z-50 h-[200px] w-full object-cover lg:h-full"
+              className="z-50 h-[200px] w-full object-cover md:h-[350px]"
             />
           </motion.div>
           <motion.div
@@ -166,7 +193,7 @@ const Follow: React.FC = () => {
               width={160}
               height={160}
               alt="logo"
-              className="z-50 h-[200px] w-full object-cover lg:h-full"
+              className="z-50 h-[200px] w-full object-cover md:h-[350px]"
             />
           </motion.div>
           <motion.div
@@ -182,7 +209,39 @@ const Follow: React.FC = () => {
               width={160}
               height={160}
               alt="logo"
-              className="z-50 h-[200px] w-full object-cover lg:h-full"
+              className="z-50 h-[200px] w-full object-cover md:h-[350px]"
+            />
+          </motion.div>
+          <motion.div
+            className="w-full lg:w-[25%]"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            {" "}
+            <Image
+              src={"/images/home/story/image4.png"}
+              width={160}
+              height={160}
+              alt="logo"
+              className="z-50 h-[200px] w-full object-cover md:h-[350px]"
+            />
+          </motion.div>
+          <motion.div
+            className="w-full lg:w-[25%]"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            {" "}
+            <Image
+              src={"/images/home/story/image2.png"}
+              width={160}
+              height={160}
+              alt="logo"
+              className="z-50 h-[200px] w-full object-cover md:h-[350px]"
             />
           </motion.div>
         </div>

@@ -23,11 +23,20 @@ const Glimpse = ({}) => {
             className="h-full w-full"
           />
         </motion.div>
-        <div className="relative flex w-full flex-col items-center justify-center gap-4 md:w-1/2">
+        <div className="relative z-40 flex w-full flex-col items-center justify-center gap-4 md:w-1/2">
           <div className="lines z-0">
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
+          </div>
+          <div className="absolute -top-16 right-0 z-0">
+            <Image
+              src={"/images/home/hero/bg.png"}
+              width={160}
+              height={160}
+              alt="background"
+              className="h-[400px] w-full object-cover lg:h-[500px]"
+            />
           </div>
           <motion.div
             className="flex h-full w-full flex-col items-start justify-center gap-4 px-4 pb-6 md:px-0 md:pb-0"

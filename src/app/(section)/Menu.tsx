@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 const Menu = ({}) => {
   return (
     <section className="relative flex h-full w-full items-center justify-center overflow-hidden px-4 py-20 md:px-[50px] md:py-24 lg:px-[100px] 2xl:px-[140px]">
+      <div className="absolute -top-16 left-0 z-0">
+        <Image
+          src={"/images/home/hero/bg.png"}
+          width={160}
+          height={160}
+          alt="background"
+          className="h-[300px] w-full object-cover lg:h-[500px]"
+        />
+      </div>
       <div className="lines z-0">
         <div className="line"></div>
         <div className="line"></div>
