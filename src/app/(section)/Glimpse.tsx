@@ -58,7 +58,7 @@ const Glimpse = ({}) => {
               all sizes.
             </p>
             <Link
-              className="ml-3 flex flex-row gap-1 rounded-none bg-transparent px-6 py-4 text-[#fff] ring-1 ring-[#D5A859] hover:bg-[#D5A859] md:ml-5"
+              className="z-40 ml-3 flex flex-row gap-1 rounded-none bg-transparent px-6 py-4 text-[#fff] ring-1 ring-[#D5A859] hover:bg-[#D5A859] md:ml-5"
               href={"/table-booking"}
             >
               {" "}

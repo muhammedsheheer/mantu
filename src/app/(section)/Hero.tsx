@@ -44,10 +44,15 @@ const Hero = ({}) => {
               Authentic, <br />
               Afghan Cuisine
             </motion.h1>
-            <div className="ml-[2%] flex flex-col items-center justify-center gap-3">
+            <div className="ml-[2%] flex flex-col items-center justify-center gap-3 md:flex-row">
               <Link href="/table-booking">
                 <Button className="hero-button flex items-center justify-center gap-3 rounded-none px-9 py-6 uppercase">
                   Reserve
+                </Button>
+              </Link>
+              <Link href="/menu">
+                <Button className="hero-button flex items-center justify-center gap-3 rounded-none px-7 py-6 uppercase">
+                  Order Online
                 </Button>
               </Link>
             </div>

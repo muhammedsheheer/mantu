@@ -112,6 +112,15 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emblaApi, tweenScale]);
 
+  useEffect(() => {
+    // Function to execute every 30 seconds
+    const intervalId = setInterval(() => {
+      if (!emblaApi) return;
+      emblaApi.scrollNext();
+    }, 30000);
+    return () => clearInterval(intervalId);
+  }, [emblaApi]);
+
   return (
     <>
       <div className="z-50 flex w-full flex-col items-center gap-2">
@@ -125,7 +134,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                       src={modelData.modelPath.glb}
                       width="400px"
                       height="400px"
-                      cameraOrbit="0deg 40deg 0deg 5m"
+                      cameraOrbit="90deg 40deg 20deg 5m"
                       fieldOfView="25deg"
                       cameraTarget="0m 0m 0m"
                     />
@@ -135,7 +144,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             </div>
             <div className="flex w-full items-center justify-center pb-6">
               {slides[selectedIndex]?.name && (
-                <p className="font-playfair min-h-[80px] max-w-[300px] text-center text-4xl text-white">
+                <p className="min-h-[80px] max-w-[300px] text-center font-playfair text-4xl text-white">
                   {formatModelName(slides[selectedIndex]?.name)}
                 </p>
               )}
@@ -153,7 +162,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               disabled={nextBtnDisabled}
             />
           </div>
-          <p className="font-playfair flex items-center text-3xl">
+          <p className="flex items-center font-playfair text-3xl">
             <span className="text-primary">{selectedIndex + 1}</span>/{" "}
             {scrollSnaps.length}
           </p>
@@ -162,11 +171,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="absolute left-0 top-0 z-10 flex h-full w-full justify-center">
         <div
           className="h-full w-[90%] sm:w-[70%] lg:w-[50%] xl:w-[30%]"
-          style={{
-            borderRadius: "187.5rem 187.5rem 0rem 0rem",
-            // background: "linear-gradient(180deg, #161616 0%, #070707 100%)",
-            background: "linear-gradient(180deg, #391D00 0%, #1C0E00 100%)",
-          }}
+          // style={{
+          //   borderRadius: "187.5rem 187.5rem 0rem 0rem",
+          //   background: "linear-gradient(180deg, #161616 0%, #070707 100%)",
+          // }}
         />
         <div className="absolute left-1/2 top-0 translate-x-16 transform sm:translate-x-24 md:translate-x-28">
           {/* <div className="relative flex size-24 items-center justify-center">

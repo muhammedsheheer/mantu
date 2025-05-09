@@ -126,7 +126,7 @@ const CustomerDetails: FC<CustomerDetailsProps> = ({
             </FormItem>
           )}
         />
-        <FormField
+        {/* <FormField
           control={form.control}
           name="place"
           render={({ field }) => (
@@ -146,7 +146,7 @@ const CustomerDetails: FC<CustomerDetailsProps> = ({
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
       </div>
 
       <FormField
