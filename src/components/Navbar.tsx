@@ -73,6 +73,13 @@ const Navbar = ({
             >
               <Link href="/menu">Menu</Link>
             </Button>
+            <Button
+              asChild
+              variant="link"
+              className="px-0 uppercase text-[#fff]"
+            >
+              <Link href="/franchise">Franchise</Link>
+            </Button>
             <Link href="/">
               <Image
                 src="/images/logo.png"
@@ -94,6 +101,13 @@ const Navbar = ({
               className="px-0 uppercase text-[#fff]"
             >
               <Link href="/contact">Contact</Link>
+            </Button>
+            <Button
+              asChild
+              variant="link"
+              className="px-0 uppercase text-[#fff]"
+            >
+              <Link href="/table-booking">Table Booking</Link>
             </Button>
           </div>
 

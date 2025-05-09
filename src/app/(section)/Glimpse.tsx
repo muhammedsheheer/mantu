@@ -23,7 +23,12 @@ const Glimpse = ({}) => {
             className="h-full w-full"
           />
         </motion.div>
-        <div className="flex w-full flex-col items-center justify-center gap-4 md:w-1/2">
+        <div className="relative flex w-full flex-col items-center justify-center gap-4 md:w-1/2">
+          <div className="lines z-0">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
           <motion.div
             className="flex h-full w-full flex-col items-start justify-center gap-4 px-4 pb-6 md:px-0 md:pb-0"
             initial={{ opacity: 0, y: 100 }}

@@ -6,8 +6,13 @@ import { motion } from "framer-motion";
 
 const Follow: React.FC = () => {
   return (
-    <section className="h-full w-full bg-[#000] px-4 pt-12 md:px-[50px] lg:pt-20 2xl:px-[100px]">
-      <div className="flex flex-col gap-5">
+    <section className="relative h-full w-full bg-[#000] px-4 pt-12 md:px-[50px] lg:pt-20 2xl:px-[100px]">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+      <div className="z-50 flex flex-col gap-5">
         {/* big screen */}
         <div className="hidden w-full flex-col gap-4 md:flex">
           <div className="flex w-full flex-col gap-4 md:flex-row">
@@ -24,7 +29,7 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover lg:h-full"
               />
             </motion.div>
             <motion.div
@@ -62,7 +67,7 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover lg:h-full"
               />
             </motion.div>
             <motion.div
@@ -78,7 +83,7 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover lg:h-full"
               />
             </motion.div>
           </div>
@@ -99,7 +104,7 @@ const Follow: React.FC = () => {
                 width={160}
                 height={160}
                 alt="logo"
-                className="h-[300px] w-full object-cover lg:h-full"
+                className="z-50 h-[300px] w-full object-cover lg:h-full"
               />
             </motion.div>
 
@@ -123,7 +128,7 @@ const Follow: React.FC = () => {
               width={160}
               height={160}
               alt="logo"
-              className="h-[200px] w-full object-cover lg:h-full"
+              className="z-50 h-[200px] w-full object-cover lg:h-full"
             />
           </motion.div>
           <motion.div
@@ -161,7 +166,7 @@ const Follow: React.FC = () => {
               width={160}
               height={160}
               alt="logo"
-              className="h-[200px] w-full object-cover lg:h-full"
+              className="z-50 h-[200px] w-full object-cover lg:h-full"
             />
           </motion.div>
           <motion.div
@@ -177,7 +182,7 @@ const Follow: React.FC = () => {
               width={160}
               height={160}
               alt="logo"
-              className="h-[200px] w-full object-cover lg:h-full"
+              className="z-50 h-[200px] w-full object-cover lg:h-full"
             />
           </motion.div>
         </div>

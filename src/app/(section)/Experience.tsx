@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 const Experience = ({}) => {
   return (
     <section className="relative h-full w-full bg-[#391D00] px-4 py-12 md:px-24 md:py-20">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
       <div className="flex flex-col gap-12 md:gap-20">
         <div>
           <h2 className="text-center font-oswald text-4xl font-[400] capitalize text-[#C4AB85] md:text-6xl">

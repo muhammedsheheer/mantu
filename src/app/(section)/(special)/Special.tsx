@@ -11,6 +11,11 @@ const Special = ({}) => {
 
   return (
     <section className="relative flex h-full w-full justify-center bg-[#391D00] pb-12 pt-12 md:pb-16 md:pt-32">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
       <div className="absolute left-[20%] top-[25%]">
         <h1
           className="hidden px-4 font-oswald text-4xl font-[400] uppercase md:block md:text-5xl"

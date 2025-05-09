@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 const Menu = ({}) => {
   return (
     <section className="relative flex h-full w-full items-center justify-center overflow-hidden px-4 py-20 md:px-[50px] md:py-24 lg:px-[100px] 2xl:px-[140px]">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
       <div className="absolute inset-0 z-10 flex justify-center md:top-2">
         <h1
           className="px-4 font-oswald text-7xl font-[400] uppercase md:mt-10 md:block md:text-[22vw]"

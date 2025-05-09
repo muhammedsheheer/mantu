@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
+import "@/styles/lines.css";
 import "@/styles/ham.css";
-
 import { cn } from "@/lib/utils";
 import { type Metadata } from "next";
 import {
@@ -55,7 +55,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "theme-custom font-roboto flex min-h-screen bg-[#070707] text-[#FBEAD2] antialiased",
+          "theme-custom flex min-h-screen bg-[#070707] font-roboto text-[#FBEAD2] antialiased",
           manrope.variable,
           roboto.variable,
           playfair.variable,

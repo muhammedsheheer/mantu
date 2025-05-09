@@ -16,7 +16,12 @@ const Reviews = ({}) => {
 
   return (
     <section className="relative flex h-full w-full justify-center bg-[#000] py-8">
-      <div className="flex h-full w-full flex-col items-start justify-center gap-4 py-12 md:py-20">
+      <div className="lines z-0">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+      <div className="mb:pt-20 flex h-full w-full flex-col items-start justify-center gap-4 pb-20 pt-8 md:pb-20">
         <div className="flex h-full w-full flex-col items-center justify-center gap-2 lg:gap-4">
           <motion.h1
             className="px-4 text-center font-oswald text-4xl font-[400] capitalize md:text-5xl"
