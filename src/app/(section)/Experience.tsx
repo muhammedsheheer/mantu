@@ -39,7 +39,7 @@ const Experience = ({}) => {
                 </h1>
               </div>
               <Image
-                src={"/images/home/story/image4.png"}
+                src={"/images/home/menu/2.webp"}
                 width={160}
                 height={160}
                 alt="logo"
@@ -76,7 +76,7 @@ const Experience = ({}) => {
                 </h1>
               </div>
               <Image
-                src={"/images/home/story/image2.png"}
+                src={"/images/home/menu/3.webp"}
                 width={160}
                 height={160}
                 alt="logo"
@@ -112,7 +112,7 @@ const Experience = ({}) => {
                 </h1>
               </div>
               <Image
-                src={"/images/home/story/image3.png"}
+                src={"/images/home/menu/1.webp"}
                 width={160}
                 height={160}
                 alt="logo"
