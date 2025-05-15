@@ -45,9 +45,9 @@ const Menu = ({}) => {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           />
-          <h3 className="font-oswald text-lg font-[700] uppercase tracking-[5px] text-[#CDAE64] md:text-xl">
+          {/* <h3 className="font-oswald text-lg font-[700] uppercase tracking-[5px] text-[#CDAE64] md:text-xl">
             MANTU
-          </h3>
+          </h3> */}
         </div>
         <div className="flex h-[350px] w-full flex-col items-center justify-center gap-4 md:h-[450px] md:w-1/3">
           <motion.img
@@ -61,9 +61,9 @@ const Menu = ({}) => {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           />
-          <h3 className="font-oswald text-lg font-[700] uppercase tracking-[5px] text-[#CDAE64] md:text-xl">
+          {/* <h3 className="font-oswald text-lg font-[700] uppercase tracking-[5px] text-[#CDAE64] md:text-xl">
             creamy pasta
-          </h3>
+          </h3> */}
         </div>
         <div className="flex h-[350px] w-full flex-col items-center justify-center gap-4 md:h-[450px] md:w-1/3">
           <motion.img
@@ -77,9 +77,9 @@ const Menu = ({}) => {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           />
-          <h3 className="font-oswald text-lg font-[700] uppercase tracking-[5px] text-[#CDAE64] md:text-xl">
+          {/* <h3 className="font-oswald text-lg font-[700] uppercase tracking-[5px] text-[#CDAE64] md:text-xl">
             kebabs
-          </h3>
+          </h3> */}
         </div>
       </div>
     </section>
